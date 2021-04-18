@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
+import {IconButton} from '@material-ui/core'
 
 function Header() {
     return (
@@ -9,7 +10,7 @@ function Header() {
                 <CategoryTitle>Play</CategoryTitle>
                 <AppTitle>Instant Plays</AppTitle>
             </Titles>
-            <AppMoreVertIcon></AppMoreVertIcon>   
+            <IconButton><AppMoreVertIcon/></IconButton>
         </Container>
     )
 }
@@ -25,6 +26,7 @@ const Container = styled.div`
     top: 0;
     background-color : white;
     z-index : 1;
+    padding : 0 15px ;
 `;
 
 const Titles = styled.div`
@@ -45,11 +47,5 @@ const AppTitle = styled.h3`
 const IconsContainer = styled.div`
 `;
 
-const AppMoreVertIcon = styled(MoreVertIcon)`
-    margin-right : 15px;
-    color : gray;
-
-    hover : {
-        
-    }
+const AppMoreVertIcon = styled(MoreVertIcon)`    
 `;
